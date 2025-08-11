@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sheepion.demo.mapper.ProductMapper">
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        INSERT INTO products(uuid,name, description, price, stock_quantity, is_available, created_at, updated_at, deleted)
+        VALUES(#{uuid}, #{name}, #{description}, #{price}, COALESCE(#{stockQuantity}, 0), COALESCE(#{isAvailable}, TRUE), #{createdAt}, #{updatedAt}, false)
+    </insert>
+    <select id="selectByUuid" parameterType="string" resultType="com.sheepion.demo.model.Product">
+        SELECT 
+            id,
+            uuid,
+            name,
+            description,
+            price,
+            stock_quantity,
+            is_available,
+            created_at,
+            updated_at,
+            deleted
+        FROM products
+        WHERE uuid = #{uuid}
+    </select>
+</mapper>
