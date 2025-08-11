@@ -33,6 +33,7 @@ public class AutoUuidInterceptor implements Interceptor {
         if (sqlCommandType == SqlCommandType.INSERT && parameter instanceof BaseEntity baseEntity) {
             // Generate UUID using Hutool
             baseEntity.setUuid(IdUtil.fastUUID());
+            baseEntity.setDeleted(false);
         }
 
         return invocation.proceed();

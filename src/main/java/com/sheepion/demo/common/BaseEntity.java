@@ -16,5 +16,6 @@ public class BaseEntity implements Serializable {
     private String uuid;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+    private Boolean deleted;
 
 }

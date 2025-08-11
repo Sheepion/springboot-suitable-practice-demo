@@ -1,0 +1,13 @@
+CREATE TABLE products (
+    id BIGSERIAL PRIMARY KEY, 
+    uuid CHAR(36) UNIQUE NOT NULL, 
+    name VARCHAR(255) NOT NULL, 
+    description TEXT, 
+    price NUMERIC(10, 2) NOT NULL, 
+    stock_quantity INT DEFAULT 0 NOT NULL, 
+    is_available BOOLEAN DEFAULT TRUE NOT NULL, 
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, 
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    deleted BOOLEAN DEFAULT FALSE NOT NULL
+);
+CREATE INDEX idx_products_uuid ON products (uuid);
