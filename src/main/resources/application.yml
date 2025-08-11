@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: springboot-practice-demo
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/demo?currentSchema=demo
+    username: root
+    password: root
+    driver-class-name: org.postgresql.Driver
