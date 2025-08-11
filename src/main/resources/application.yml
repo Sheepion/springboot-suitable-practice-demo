@@ -6,3 +6,32 @@ spring:
     username: root
     password: root
     driver-class-name: org.postgresql.Driver
+
+  flyway:  
+    enabled: true  
+    url: jdbc:postgresql://127.0.0.1:5432/demo?currentSchema=demo
+    user: root  
+    password: root  
+    schemas: demo  
+    locations:  
+      - classpath:db/migration
+    validate-on-migrate: true
+    
+# springdoc-openapi
+springdoc:
+  swagger-ui:
+    # use /doc.html for knife4j ui (better swagger ui)
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.sheepion.demo.controller
+# knife4j enhanced features
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn

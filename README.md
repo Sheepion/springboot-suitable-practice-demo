@@ -12,11 +12,12 @@ trying to demonstrate a good(maybe) practice of using Springboot with these libr
 5. [JUnit 5](https://junit.org/junit5/) for unit testing.
 6. [Testcontainers](https://www.testcontainers.org/) for better mapper test.
 7. [MapStruct-plus](https://github.com/linpeilie/mapstruct-plus) for easier mapping between DTO and entity.
+8. [Knife4j](https://doc.xiaominfo.com) for better OpenAPI swagger documents.
 
 # Dependency version used
 
 | Dependency     | Version | Remark                           |
-|----------------|---------|----------------------------------|
+| -------------- | ------- | -------------------------------- |
 | JDK            | 17      |                                  |
 | PostgreSQL     | 15      |                                  |
 | Springboot     | 3.5.4   |                                  |
@@ -25,4 +26,4 @@ trying to demonstrate a good(maybe) practice of using Springboot with these libr
 | MyBatis        | 3.5.19  | from Mybatis-spring-boot-starter |
 | Testcontainer  | 1.21.3  | from spring-boot-testcontainers  |
 | MapStruct-plus | 1.4.8   |                                  |
-
+| Knife4j        | 4.4.0   |                                  |
