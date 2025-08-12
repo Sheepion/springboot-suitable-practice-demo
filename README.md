@@ -27,3 +27,9 @@ trying to demonstrate a good(maybe) practice of using Springboot with these libr
 | Testcontainer  | 1.21.3  | from spring-boot-testcontainers  |
 | MapStruct-plus | 1.4.8   |                                  |
 | Knife4j        | 4.4.0   |                                  |
+
+# What you may learn from this repo
+
+## test
+
+1. [Mapper test with Testcontainer](docs/test/MapperTest.md)
