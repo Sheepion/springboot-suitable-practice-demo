@@ -34,6 +34,10 @@ trying to demonstrate a good(maybe) practice of using Springboot with these libr
 
 1. [Mapper test with Testcontainer](docs/test/MapperTest.md)
 
+### Design
+
+1. [Service layer design practices](docs/design/Service.md)
+
 ## Todo list
 
 Docs about:
