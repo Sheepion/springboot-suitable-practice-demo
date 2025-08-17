@@ -33,6 +33,7 @@ trying to demonstrate a good(maybe) practice of using Springboot with these libr
 ### Testing
 
 1. [Mapper test with Testcontainer](docs/test/MapperTest.md)
+2. [Mocked test with Mockito](docs/test/MockTest.md)
 
 ### Design
 
