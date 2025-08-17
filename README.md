@@ -14,7 +14,7 @@ trying to demonstrate a good(maybe) practice of using Springboot with these libr
 7. [MapStruct-plus](https://github.com/linpeilie/mapstruct-plus) for easier mapping between DTO and entity.
 8. [Knife4j](https://doc.xiaominfo.com) for better OpenAPI swagger documents.
 
-# Dependency version used
+## Dependency version used
 
 | Dependency     | Version | Remark                           |
 | -------------- | ------- | -------------------------------- |
@@ -28,8 +28,16 @@ trying to demonstrate a good(maybe) practice of using Springboot with these libr
 | MapStruct-plus | 1.4.8   |                                  |
 | Knife4j        | 4.4.0   |                                  |
 
-# What you may learn from this repo
+## What you may learn from this repo
 
-## test
+### Testing
 
 1. [Mapper test with Testcontainer](docs/test/MapperTest.md)
+
+## Todo list
+
+Docs about:
+
+- Common class like Result.
+- File structure about springboot web application.
+- Mock test usage.
