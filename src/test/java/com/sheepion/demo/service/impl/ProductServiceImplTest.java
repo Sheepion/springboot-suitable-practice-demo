@@ -1,22 +1,15 @@
 package com.sheepion.demo.service.impl;
 
-import java.math.BigDecimal;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.boot.test.mock.mockito.SpyBean;
-import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.context.bean.override.mockito.MockitoSpyBean;
-import org.springframework.validation.Validator;
 
 import com.sheepion.demo.dto.ProductCreateDto;
 import com.sheepion.demo.mapper.ProductMapper;
@@ -70,16 +63,15 @@ class ProductServiceImplTest {
 
         @ParameterizedTest
         @MethodSource("com.sheepion.demo.service.impl.data.ProductDtoData#invalidFieldProductCreateDtos")
-        void shouldThrowException_whenValidationFail(ProductCreateDto params){
-            //no need for mock
+        void shouldThrowException_whenValidationFail(ProductCreateDto params) {
+            // no need for mock
 
             // When the createProduct method is called with invalid params,
             // it should throw a ConstraintViolationException
             Assertions.assertThrows(
                     IllegalArgumentException.class,
                     () -> productService.createProduct(params),
-                    "Expected createProduct to throw, but it didn't"
-            );
+                    "Expected createProduct to throw, but it didn't");
 
             // Verify that the mapper insert method was never called
             Mockito.verify(productMapper, Mockito.never()).insert(Mockito.any(Product.class));
